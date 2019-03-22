@@ -2,10 +2,10 @@ import React from 'react';
 import Ul, { MuiLink } from './styles';
 import { Button } from '@material-ui/core';
 
-const MenuItem = ({ name, id }) => (
-  <li key={id}>
-    <Button style={{ display: 'flex' }}>
-      <MuiLink to={'/' + name}>{name}</MuiLink>
+const MenuItem = ({ name }) => (
+  <li >
+    <Button style={{ display: 'flex' }} >
+      <MuiLink to={'/' + name} >{name}</MuiLink>
     </Button>
   </li>
 );
@@ -13,7 +13,7 @@ const MenuItem = ({ name, id }) => (
 export default ({ list }) => (
   <Ul>
     {(list || []).map(item =>
-      <MenuItem {...item} />
+      <MenuItem name={item.name} key={item.id} />
     )}
   </Ul>
 );

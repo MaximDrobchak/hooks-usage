@@ -4,6 +4,9 @@ import { Link } from "react-router-dom";
 export default styled.ul`
   margin: auto;
   display: inline-flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
 `
 
 export const MuiLink = styled(Link)`
